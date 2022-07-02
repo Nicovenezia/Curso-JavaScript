@@ -3,49 +3,70 @@
 function saludar() {
     alert("Bienvenido/a, vamos a registrarnos!");
 }
-
 saludar();
 
-let edad = prompt("ingresa tu edad");
-edad = parseInt(edad);
+function ingreso(mensaje) {
+    let dato = prompt(mensaje);
+    return dato
+}
 
-if (edad == "") {
+let nombre = ingreso("ingresa tu nombre");
+if (nombre == "") {
     alert("Campo requerido");
 }else {
-    alert("Usted es apto para registrarse");
-    let nombre = prompt("ingresa tu nombre");
-
-    if (nombre == "") {
+    let apellido = ingreso("ingresa tu apellido");
+    if (apellido== "") {
         alert("Campo requerido");
     }else {
-        let apellido = prompt("ingresa tu apellido");
-
-        if (apellido== "") {
+        let telefono = parseInt(ingreso("ingresa tu telefono"));
+        if (telefono == "") {
             alert("Campo requerido");
         }else {
-            alert("Hola " + nombre + " " + apellido +" te registraste correctamente!");
+            let mail = ingreso("ingresa tu mail");
+            if (mail == "") {
+                alert("Campo requerido");
+            }else {
+                alert("Hola " + nombre + " " + apellido +" te registraste correctamente!");
+
+function Usuario(nombre, apellido, telefono, mail){
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.telefono = telefono;
+    this.mail = mail;
+}
+
+const usuario1 = new  Usuario (nombre, apellido, telefono, mail)
+console.log(usuario1);
 /* TIENDA */
-let ingreso = prompt("Elige el producto que quieras comprar: \n 1-Cavado $600 \n 2-Piernas $800 \n 3-Brazos $700 \n 4-Tira de cola $500 \n 5-Rostro $550");
-    
+const Productos =  [
+    {producto: "Cavado Completo", precio: 850},
+    {producto: "Pierna Entera", precio: 1400},
+    {producto: "Brazo Entero", precio: 1150},
+    {producto: "Tira de cola", precio: 800},
+    {producto: "Rostro Completo", precio: 1150},
+]
+console.log(Productos);
+
+let ingreso = prompt("Elige el producto que quieras comprar: \n 1-Cavado Completo $850 \n 2-Pierna Entera $1.400 \n 3-Brazo Entero $1.150 \n 4-Tira de cola $800 \n 5-Rostro Completo $1.150");
     if (ingreso == "0") {
     alert("Gracias, que tengas un buen día");
     }
     while (ingreso != "0") {
         switch (ingreso) {
             case "1":
-                alert("Seleccionaste Cavado $600, te atenderemos de inmediato");
+                alert("Seleccionaste Cavado Completo $850, te atenderemos de inmediato");
                 break;
             case "2":
-                alert("Seleccionaste Piernas $800, te atenderemos de inmediato");
+                alert("Seleccionaste Piernas $1.400, te atenderemos de inmediato");
                 break;
             case "3":
-                alert("Seleccionaste Brazos $700, te atenderemos de inmediato");
+                alert("Seleccionaste Brazo Entero $1.150, te atenderemos de inmediato");
                 break;
             case "4":
-                alert("Seleccionaste Tira de cola $500, te atenderemos de inmediato");
+                alert("Seleccionaste Tira de cola $800, te atenderemos de inmediato");
                 break;
             case "5":
-                alert("Seleccionaste Rostro $550, te atenderemos de inmediato");
+                alert("Seleccionaste Rostro Completo $1.150, te atenderemos de inmediato");
                 break;
             default:
                 alert("opcion no valida");
@@ -76,7 +97,4 @@ if (pago == "no"){
 }
 }
 }
-
-
-
-
+}
