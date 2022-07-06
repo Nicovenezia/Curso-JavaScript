@@ -1,5 +1,6 @@
 
 /* REGISTRARSE */
+
 function saludar() {
     alert("Bienvenido/a, vamos a registrarnos!");
 }
@@ -34,10 +35,11 @@ function Usuario(nombre, apellido, telefono, mail){
     this.telefono = telefono;
     this.mail = mail;
 }
-
 const usuario1 = new  Usuario (nombre, apellido, telefono, mail)
 console.log(usuario1);
+
 /* TIENDA */
+
 const Productos =  [
     {producto: "Cavado Completo", precio: 850},
     {producto: "Pierna Entera", precio: 1400},
@@ -46,6 +48,24 @@ const Productos =  [
     {producto: "Rostro Completo", precio: 1150},
 ]
 console.log(Productos);
+/* Precios pagando en efectivo */
+const precios = Productos.map(el=>{
+    return {
+        producto: el.producto,
+        precio: el.precio / 1.30,
+    }
+})
+/*
+let redondeo = Math.floor()
+console.log(redondeo);
+*/
+console.log(precios);
+
+/* Filter */
+const barato = Productos.filter((el) =>{
+    return el.precio < 1000
+})
+console.log(barato);
 
 let ingreso = prompt("Elige el producto que quieras comprar: \n 1-Cavado Completo $850 \n 2-Pierna Entera $1.400 \n 3-Brazo Entero $1.150 \n 4-Tira de cola $800 \n 5-Rostro Completo $1.150");
     if (ingreso == "0") {
@@ -77,7 +97,9 @@ let ingreso = prompt("Elige el producto que quieras comprar: \n 1-Cavado Complet
         alert("Pasemos al costo final del producto");
     }
 }
+
 /* PRECIO FINAL */
+
 alert("Recorda que pagando en efectivo tenes un descuento del 30%")
 
 let precioProducto = prompt("Ingresa el precio del producto seleccionado")
