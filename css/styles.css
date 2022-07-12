@@ -12,3 +12,16 @@ span {
     padding: 0  0.4rem;
     font-style: italic;
 }
+
+form{
+    text-align: center;
+}
+
+.error{
+    color: red;
+}
+
+.valido{
+    color: green;
+}
+

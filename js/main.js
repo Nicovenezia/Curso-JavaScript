@@ -5,41 +5,46 @@ function saludar() {
     alert("Bienvenido/a, vamos a registrarnos!");
 }
 saludar();
-
-function ingreso(mensaje) {
-    let dato = prompt(mensaje);
-    return dato
-}
-
-let nombre = ingreso("ingresa tu nombre");
-if (nombre == "") {
-    alert("Campo requerido");
-}else {
-    let apellido = ingreso("ingresa tu apellido");
-    if (apellido== "") {
-        alert("Campo requerido");
-    }else {
-        let telefono = parseInt(ingreso("ingresa tu telefono"));
-        if (telefono == "") {
-            alert("Campo requerido");
-        }else {
-            let mail = ingreso("ingresa tu mail");
-            if (mail == "") {
-                alert("Campo requerido");
-            }else {
-                alert("Hola " + nombre + " " + apellido +" te registraste correctamente!");
-
-function Usuario(nombre, apellido, telefono, mail){
+/*
+function Usuario(nombre, email, contraseña){
     this.nombre = nombre;
-    this.apellido = apellido;
-    this.telefono = telefono;
-    this.mail = mail;
+    this.email = email;
+    this.contraseña = contraseña;
 }
-const usuario1 = new  Usuario (nombre, apellido, telefono, mail)
-console.log(usuario1);
+const usuario1 = new  Usuario (nombre, email, contraseña)
+console.log(usuario1);   
+*/
+const tituloSecundario = document.querySelector("h2"),
+    nombre = document.getElementById("nombre"),
+    email = document.getElementById("email"),
+    contraseña = document.getElementById("contraseña"),
+    p = document.getElementById("mensaje"),
+    botonRegistrarse = document.getElementById("btn");
+
+tituloSecundario.innerText = "DOM + Eventos";
+
+botonRegistrarse.addEventListener("click", ()=> {
+    if (nombre.value == "") {
+        p.classList.add("error")
+        p.innerText = "Completa los campos vacios!"
+    }else {
+        if (email.value == "") {
+            p.classList.add("error")
+            p.innerText = "Completa los campos vacios!"
+        }else {
+            if (contraseña.value == "") {
+                p.classList.add("error")
+                p.innerText = "Completa los campos vacios!"
+            }else {
+                p.classList.add("valido")
+                p.innerText = "Hola " + nombre.value +" te registraste correctamente!";
+}
+}
+}
+});             
 
 /* TIENDA */
-
+/*
 const Productos =  [
     {producto: "Cavado Completo", precio: 850},
     {producto: "Pierna Entera", precio: 1400},
@@ -49,19 +54,17 @@ const Productos =  [
 ]
 console.log(Productos);
 /* Precios pagando en efectivo */
+/*
 const precios = Productos.map(el=>{
     return {
         producto: el.producto,
         precio: el.precio / 1.30,
     }
 })
-/*
-let redondeo = Math.floor()
-console.log(redondeo);
-*/
 console.log(precios);
 
 /* Filter */
+/*
 const barato = Productos.filter((el) =>{
     return el.precio < 1000
 })
@@ -92,14 +95,14 @@ let ingreso = prompt("Elige el producto que quieras comprar: \n 1-Cavado Complet
                 alert("opcion no valida");
                 break;
         }
-    ingreso = prompt("Puedes elegir otro producto; \nPon 0 para finalizar: \n 1-Cavado $600\n 2-Piernas $800\n 3-Brazos $700\n 4-Tira de cola $500\n 5-Rostro $550");
+    ingreso = prompt("Puedes elegir otro producto; \nPon 0 para finalizar: \n 1-Cavado Completo $850 \n 2-Pierna Entera $1.400 \n 3-Brazo Entero $1.150 \n 4-Tira de cola $800 \n 5-Rostro Completo $1.150");
     if (ingreso == "0") {
         alert("Pasemos al costo final del producto");
     }
 }
 
 /* PRECIO FINAL */
-
+/*
 alert("Recorda que pagando en efectivo tenes un descuento del 30%")
 
 let precioProducto = prompt("Ingresa el precio del producto seleccionado")
@@ -114,9 +117,7 @@ if (pago == "no"){
     const descuento = x => x * 0.30
     
     let precioDescuento = resta(precioProducto, descuento(precioProducto));
-    alert("El precio final con descuento es de " + precioDescuento);
+    alert("El precio final con descuento es de " + Math.floor(precioDescuento));
 }
-}
-}
-}
-}
+
+*/
