@@ -1,0 +1,32 @@
+/*estilo para las cajas de los productos*/
+$caja-productos: (
+    text-align: center,
+    margin: 2rem,
+    width: 36rem,
+    height: 38rem,
+    border-radius: 5px,
+);
+
+.cajaProductos{
+    text-align: map-get($caja-productos, text-align);
+    margin: map-get($caja-productos, margin);
+    width: map-get($caja-productos, width);
+    height: map-get($caja-productos, height);
+    border-radius: map-get($caja-productos, border-radius );
+}
+
+/*estilo para las cajas de las sucursales*/
+$caja-sucursales: (
+    width: 45rem,
+    margin: 2rem,
+    text-align: center,
+    border-radius: 5px,
+);
+
+.cajaSucursales{
+    width: map-get($caja-sucursales, width);
+    margin: map-get($caja-sucursales, margin);
+    text-align: map-get($caja-sucursales, text-align);
+    border-radius: map-get($caja-productos, border-radius );  
+}
+

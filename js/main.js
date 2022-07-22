@@ -1,48 +1,4 @@
 
-/* REGISTRARSE */
-
-function saludar() {
-    alert("Bienvenido/a, vamos a registrarnos!");
-}
-saludar();
-/*
-function Usuario(nombre, email, contraseña){
-    this.nombre = nombre;
-    this.email = email;
-    this.contraseña = contraseña;
-}
-const usuario1 = new  Usuario (nombre, email, contraseña)
-console.log(usuario1);   
-*/
-const tituloSecundario = document.querySelector("h2"),
-    nombre = document.getElementById("nombre"),
-    email = document.getElementById("email"),
-    contraseña = document.getElementById("contraseña"),
-    p = document.getElementById("mensaje"),
-    botonRegistrarse = document.getElementById("btn");
-
-tituloSecundario.innerText = "DOM + Eventos";
-
-botonRegistrarse.addEventListener("click", ()=> {
-    if (nombre.value == "") {
-        p.classList.add("error")
-        p.innerText = "Completa los campos vacios!"
-    }else {
-        if (email.value == "") {
-            p.classList.add("error")
-            p.innerText = "Completa los campos vacios!"
-        }else {
-            if (contraseña.value == "") {
-                p.classList.add("error")
-                p.innerText = "Completa los campos vacios!"
-            }else {
-                p.classList.add("valido")
-                p.innerText = "Hola " + nombre.value +" te registraste correctamente!";
-}
-}
-}
-});             
-
 /* TIENDA */
 /*
 const Productos =  [
@@ -119,5 +75,4 @@ if (pago == "no"){
     let precioDescuento = resta(precioProducto, descuento(precioProducto));
     alert("El precio final con descuento es de " + Math.floor(precioDescuento));
 }
-
 */

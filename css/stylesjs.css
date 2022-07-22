@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+body{
+    font-family: 'Helvetica', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background: url(../img/dermopurity.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-seccion{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-contenedor{
+    width: 100%;
+    margin: 15px;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.711);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(5px); 
+    background-color: #0091ff91;
+}
+
+.form-box{
+    padding: 40px 35px;
+    border-radius: 50px;
+}
+
+.form-box h3{
+    font-size: 40px;
+    text-align: center;
+    line-height: 1.2;
+    color: white;
+}
+
+.form-box form{
+    margin: 25px 0 20px;
+}
+
+.form-box .input-box{
+    margin: 25px;
+}
+
+.form-box ::placeholder{
+    color: rgb(228, 228, 228);
+}
+
+.form-box .input-control{
+    display: block;
+    height: 45px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #00dae4;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 16px;
+}
+
+.form-box .input-control:focus{
+    outline: none;
+}
+
+.form-box .btn{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 25px;
+    user-select: none;
+    background-color: rgba(43, 209, 192, 0.742);
+}
+.btn:hover{
+    background-color: #00dae4;
+}
+
+.p-login{
+    text-align: center;
+}
+
+.a-login{
+    text-decoration: none;
+    margin-left: 10px;
+    color: rgba(43, 209, 192, 0.742);
+}
+.a-login:hover{
+    color: #00dae4
+}
+
+.error{
+    color: red;
+    text-align: center;
+}
+
+.valido{
+    color: rgb(0, 128, 32);
+    text-align: center;
+}
+

@@ -1,0 +1,576 @@
+@import "tipografia","colores","variables";
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+/*
+HEADER                   HEADER               HEADER 
+*/
+
+.contenedorHeader{
+    position: absolute;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    border-radius: 3rem;
+    z-index: 1;
+}
+
+.cajaHeader{
+    align-items: center;
+    justify-content: center;
+    background-color: $color-header;
+    padding: 0.5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.cajaLogoNav{
+    width: 6rem;
+    align-self: center;
+}
+
+.logo{
+    height: 5rem;
+}
+
+.cajaValkiriaNav{
+    width: 13rem;
+    font-family: $fuente-principal;
+}
+
+.h1ValkiriaNav{
+    font-size: 3rem;
+    color: $color-principal;
+}
+
+@media screen and (max-width: 600px){  
+    .cajaH3Nav{
+        display: none;
+    }
+}
+
+.h3Nav{
+    font-family: $fuente-nav;
+    font-size: 1.3rem;
+    color: $color-principal;
+    margin-top: 1.2rem;
+}
+
+.contenedorNav{
+    justify-content: center;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-family: $fuente-nav;
+}   
+
+ul li.active{
+    background: #35FAD4;
+}
+
+li{
+    transition: background-color .1s;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    padding: 0.4rem 0.5rem;
+}
+
+li:hover{
+    background-color: #35FAD4;
+    color: $color-principal;
+    transform: scale(1.1);
+}
+
+.bottonNav{
+    background-color: rgb(226, 226, 226);
+}
+/*
+HEADER                     HEADER             HEADER 
+*/
+/*
+SECTION INICIO         SECTION INICIO           SECTION INICIO 
+*/
+#sectionIndex{
+    background-image: url(../img/Depilacion-laser-2.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 94rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(5rem);
+}
+
+.cajaDescuento{
+    max-width: 60rem;
+    margin-top: 10rem;
+    text-align: center;
+}
+
+.logoImgDescuento{
+    max-width: 95%;
+    margin-top: 6rem;
+    box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30%;
+    backdrop-filter: blur(1rem);
+}
+/*
+SECTION INICIO         SECTION INICIO           SECTION INICIO 
+*/
+/*
+SECTION TIENDA        SECTION TIENDA           SECTION TIENDA 
+*/
+.contenedorDepilacion{
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.h2Depilacion{
+    font-family: $fuente-idraet;
+    font-size: 2.5rem;
+    color: $color-principal;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2rem;
+    padding: 1rem;
+    width: 25rem;
+    text-decoration: none;
+}
+
+.h2Depilacion:hover{
+    background-color: $color-principal;
+    color: white;
+}
+
+.navbarBuscar{
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.cajaBuscar{
+    width: 31rem;
+    height: 3rem;
+}
+
+.buscarTienda{
+    border: none;
+    border-bottom: 2px solid #bfbfbf;
+    background: none !important;
+}
+
+.buscarButton{
+    height: 2.2rem;
+    align-self: center;
+}
+
+.contenedorTienda{
+    justify-content: center;
+}
+
+.imgProductos{
+    height: 22rem;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+.cajaProductos:hover{
+    transform: scale(1.05)
+}
+
+.nombreProductos{
+    font-family: $fuente-nombre-producto
+}
+
+.precioProductos{
+    font-size: 1.4rem;
+    font-family: $fuente-precio-producto;
+    text-shadow: 0 0 black;
+}
+
+.descuento{
+    text-decoration: line-through;
+    text-shadow: none;
+    color: rgb(112, 112, 112);
+}
+
+.agregarProductos{
+    width: 7rem;
+    height: 3rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    background-color: rgba(0,146,255,1);
+    color: white;
+    padding: 0.5rem;
+    font-family: $fuente-nav;
+    border-radius: 5px;
+}
+
+.agregarProductos:hover{
+    background-color: $color-header;
+    color: $color-principal;
+}
+/*
+SECTION TIENDA        SECTION TIENDA           SECTION TIENDA 
+*/
+/*
+SECTION IDRAET        SECTION IDRAET           SECTION IDRAET 
+*/
+.cajaHeaderIdraet{
+    align-items: center;
+    justify-content: center;
+    background-color: turquoise;
+    padding: 0.5rem;
+}
+
+.sectionIdraet{
+    background-image: url(../img/dermopurity.webp);
+    height: 115vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #5cb8b2;
+    background-blend-mode: multiply;
+}
+
+.contenedorIdraet{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    backdrop-filter: blur(3px);
+}
+
+.cajaIdraet{
+    color: white;
+    text-align: left;
+    position: relative;
+    margin-left: 10rem;
+    top: 25%;
+    font-family: 'Gayathri', sans-serif;
+    width: 60%;
+}
+
+.cajaIdraet h2{
+    font-size: 5rem;
+    display: flex;
+}
+
+.cajaIdraet h3{
+    font-size: 3rem;
+}
+
+.cajaIdraet hr{
+    height: 0.5rem;
+    width: 70px;
+    margin-top: 3rem;
+    background: white;
+    border: none;
+    margin-bottom: 3rem;
+    border-radius: 10rem;
+    opacity: 1;
+}
+
+.cajaIdraet h4{
+    font-size: 2.8rem;
+    font-family: 'Quicksand', sans-serif;
+}
+/*
+SECTION IDRAET       SECTION IDRAET           SECTION IDRAET
+*/
+/*
+SECTION SUCURSALES       SECTION SUCURSALES           SECTION SUCURSALES
+*/
+
+.cajaNavSucursales{
+    text-align: center;
+    align-items: center;
+}
+
+.h2Sucursales{
+    font-size: 3rem;
+    font-family: $fuente-nav;
+    margin: 3rem;
+    padding: 2rem;
+}
+
+.contenedorSucursales{
+    justify-content: center;
+    align-items: center;
+}
+
+.nombreSucursales{
+    margin-top: 0.6rem;
+    font-size: 1.7rem;
+}
+
+.mapaSucursales{
+    max-width: 100%;
+}
+/*
+SECTION SUCURSALES       SECTION SUCURSALES           SECTION SUCURSALES
+*/
+/*
+SECTION NOSOTROS        SECTION NOSOTROS           SECTION NOSOTROS
+*/
+#imagenFondo{
+    background-image: url(../img/logonosotros.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 105rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(5rem);
+}
+
+.cajaNosotros{
+    width: 74%;
+    text-align: center;
+    margin-left: 5rem;
+    margin-bottom: 4rem;
+}
+
+.h2Nosotros{
+    font-family: $fuente-principal;
+    font-size: 3.5rem;
+    color: $color-principal;
+}
+
+.h3Nosotros {
+    font-family: $fuente-principal;
+    font-size: 2.5rem;
+    color: $color-principal; 
+    margin-top: 2rem;
+}
+
+.nosotrosTexto{
+    width: 74%;
+    text-align: center;
+    margin-left: 5rem;
+}
+
+.cajaNosotrosTexto{
+    background-color: $color-caja-nosotros-texto;
+    font-family: $fuente-precio-producto;
+    font-size: 2.2rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+}
+/*
+SECTION NOSOTROS        SECTION NOSOTROS           SECTION NOSOTROS
+*/
+/*
+SECTION CONTACTO       SECTION CONTACTO           SECTION CONTACTO
+*/
+.contenedorSectionContacto{
+    height: 120rem;
+    background: $color-fondo-contacto;
+}
+
+.contenedorContacto{
+    justify-content: center;
+    align-items: center;
+    height: 80rem;
+    margin: 0px 2px;
+} 
+
+.cajaH2Contacto{
+    text-align: center;
+    color: $color-principal;
+    padding-top: 12rem;
+}
+
+.h2Contatco{
+    font-size: 4rem;
+    margin: 2rem;
+}
+
+.cajaLogoContacto{
+    width: 40rem;
+    text-align: center;
+    align-self: center;
+}
+
+.logoContacto{
+    width: 100%;
+}
+
+.contenedorForm{
+    position: relative;
+    width: 50rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 3rem;
+    margin: 2px;
+    box-shadow: 0 2.5rem 4.5rem rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    overflow: hidden;
+    backdrop-filter: blur(1rem);
+}
+
+.cajaForm{
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.form-control{
+    font-size: 1.4rem;
+    border-radius: 5px;
+}
+
+.btn-primary{
+    font-size: 1.4rem;
+}
+/*
+SECTION CONTACTO       SECTION CONTACTO           SECTION CONTACTO
+*/
+/*
+WHATSAPP FLOTANTE      WHATSAPP FLOTANTE          WHATSAPP FLOTANTE
+*/
+.contenedorIconWhatsapp{
+    display: flex;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px){
+    .contenedorIconWhatsapp{
+        right: 1rem;
+    }
+}
+
+.contenedorIconWhatsapp:hover{
+    filter: drop-shadow(0px 0px 10px #00ff22);
+    transform: scale(1.1);
+}
+
+.cajaIconWhatsapp{
+    height: 8rem;
+}
+
+@media screen and (max-width: 600px){
+    .cajaIconWhatsapp{
+        height: 6rem;
+    }
+}
+
+.cajaContactanosWhatsapp{
+    background-color: rgba(86, 201, 104, 0.58);
+    color: $color-principal;
+    font-size: 1.8rem;
+    font-family: $fuente-nav;
+    margin: 1rem;
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+@media screen and (max-width: 600px){
+    .cajaContactanosWhatsapp{
+        font-size: 1.4rem;
+    }
+}
+/*
+WHATSAPP FLOTANTE      WHATSAPP FLOTANTE          WHATSAPP FLOTANTE
+*/
+/*
+FOOTER                     FOOTER                 FOOTER 
+*/
+.contenedorFooter{
+    align-items: center;
+    justify-content: center;
+    background: $color-footer;
+    padding: 1rem;
+    position: relative;
+}
+
+.cajaLogoFooter{
+    text-align: end;
+    width: 6rem;
+}
+
+.logoFooter{
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.contenedorValkiriaFooter{
+    width: 16rem;
+    margin-bottom: 2rem;
+}
+
+.h3Footer{
+    font-family: $fuente-nav;
+    font-size: 1.3rem;
+    color: $color-principal;
+}
+
+.cajaContactoFooter{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 21rem;
+}
+
+.contenedorTerminos{
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.h2Contactanos{
+    font-size: 2rem;
+    font-family: $fuente-principal;
+    color: $color-principal;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    letter-spacing: 3px;
+}
+
+.pContacto{
+    font-size: 1.4rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.imgTelefono{
+    height: 2rem;
+    margin-right: 1rem;
+}
+
+.cajaLogoRedesFooter{
+    text-align: center;
+    width: 22rem;
+    margin-bottom: 2rem;
+}
+
+.logoRedes{
+    height: 3rem;
+    margin: 1rem;
+}
+
+.logoRedes:hover{
+    filter: drop-shadow(0px 0px 10px white);
+    transform: scale(1.1);
+}
+/*
+FOOTER                     FOOTER                 FOOTER 
+*/
