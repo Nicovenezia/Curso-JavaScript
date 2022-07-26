@@ -15,11 +15,28 @@ body{
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.box-valkiria{
+    display: flex;
+    align-items: center;
+}
+
+.logo-valkiria{
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+.h1-valkiria{
+    font-size: 40px;
+    font-family: "Archivo Black", sans-serif;
+    color: #052551;
 }
 
 .form-contenedor{
     width: 100%;
-    margin: 15px;
     max-width: 450px;
     position: relative;
     z-index: 1;
@@ -32,7 +49,7 @@ body{
 }
 
 .form-box{
-    padding: 40px 35px;
+    padding: 35px 30px;
     border-radius: 50px;
 }
 

@@ -9,12 +9,9 @@ function IniciarSesion(usuario) {
     let userFound = usuario.find((usuario)=> {
         return usuario.email == email.value && usuario.password == password.value
     });
-    if(userFound){
-        window.location.href = "./pag/inicio.html";
-    }else{
-        p.classList.add("error");
-        p.innerText = "Email o password incorrectos!";
-    }
+    //Operador ternario
+    userFound ? window.location.href = "./pag/inicio.html" : p.classList.add("error"); p.innerText = "Email o password incorrectos!";
+
     return userFound;
 }
 

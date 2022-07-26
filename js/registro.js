@@ -5,7 +5,7 @@ const btnRegistrarse = document.querySelector(".registrarse"),
     emailRegistro = document.querySelector(".emailRegistro"),
     passwordRegistro = document.querySelector(".passwordRegistro");
     p = document.getElementById("mensaje");
-
+//operador logico or
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 //Creador de Usuarios
@@ -63,8 +63,8 @@ btnRegistrarse.addEventListener ("click", (e) =>{
                 p.innerText = "Hola " + nombre.value +" te registraste correctamente!";
 
                 guardarUsuario(newUser)
-                limpiarCampos()
                 guardarEnStorage(usuarios)
+                limpiarCampos()
             }
         }
     }
