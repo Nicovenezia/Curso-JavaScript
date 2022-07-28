@@ -10,7 +10,12 @@ function IniciarSesion(usuario) {
         return usuario.email == email.value && usuario.password == password.value
     });
     //Operador ternario
-    userFound ? window.location.href = "./pag/inicio.html" : p.classList.add("error"); p.innerText = "Email o password incorrectos!";
+    userFound ? window.location.href = "./pag/inicio.html" : 
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Email o password incorrectos!',
+    })
 
     return userFound;
 }

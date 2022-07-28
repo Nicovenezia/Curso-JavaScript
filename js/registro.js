@@ -8,6 +8,21 @@ const btnRegistrarse = document.querySelector(".registrarse"),
 //operador logico or
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
+//Completar campos vacios!
+/*
+Toastify({
+    text: "Completar los campos vacios!",
+    duration: 2500,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "left", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+    onClick: function(){} // Callback after click
+}).showToast();
+*/
 //Creador de Usuarios
 class Usuario {
     constructor (nombre, email, password) {
@@ -59,9 +74,15 @@ btnRegistrarse.addEventListener ("click", (e) =>{
                 p.classList.add("error")
                 p.innerText = "Completa los campos vacios!"
             }else {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Te registraste correctamente!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 p.classList.add("valido")
                 p.innerText = "Hola " + nombre.value +" te registraste correctamente!";
-
                 guardarUsuario(newUser)
                 guardarEnStorage(usuarios)
                 limpiarCampos()

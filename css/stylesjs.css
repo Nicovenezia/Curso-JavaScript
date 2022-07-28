@@ -22,6 +22,7 @@ body{
 .box-valkiria{
     display: flex;
     align-items: center;
+    margin: 10px;
 }
 
 .logo-valkiria{
