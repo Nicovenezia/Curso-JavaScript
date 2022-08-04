@@ -1,5 +1,5 @@
 {
-  "name": "nicolas-venezia-centro-estetico---copia",
+  "name": "nicolas-venezia-centro-estetico",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nicovenezia/CentroEstetico-NicolasVenezia.git"
+    "url": "git+https://github.com/Nicovenezia/Curso-JavaScript.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Nicovenezia/CentroEstetico-NicolasVenezia/issues"
+    "url": "https://github.com/Nicovenezia/Curso-JavaScript/issues"
   },
-  "homepage": "https://github.com/Nicovenezia/CentroEstetico-NicolasVenezia#readme",
+  "homepage": "https://github.com/Nicovenezia/Curso-JavaScript#readme",
   "devDependencies": {
     "node-sass": "^7.0.1",
     "nodemon": "^2.0.15"

@@ -1,78 +1,32 @@
+// TIENDA
 
-/* TIENDA */
-/*
-const Productos =  [
-    {producto: "Cavado Completo", precio: 850},
-    {producto: "Pierna Entera", precio: 1400},
-    {producto: "Brazo Entero", precio: 1150},
-    {producto: "Tira de cola", precio: 800},
-    {producto: "Rostro Completo", precio: 1150},
-]
-console.log(Productos);
-/* Precios pagando en efectivo */
-/*
-const precios = Productos.map(el=>{
-    return {
-        producto: el.producto,
-        precio: el.precio / 1.30,
-    }
-})
-console.log(precios);
+async function fetchProductos() {
+    const respuesta = await fetch("../data/productos.json") 
+    return await respuesta.json()
+}
 
-/* Filter */
-/*
-const barato = Productos.filter((el) =>{
-    return el.precio < 1000
-})
-console.log(barato);
+const seccionProductos = document.querySelector(".contenedorTienda")
 
-let ingreso = prompt("Elige el producto que quieras comprar: \n 1-Cavado Completo $850 \n 2-Pierna Entera $1.400 \n 3-Brazo Entero $1.150 \n 4-Tira de cola $800 \n 5-Rostro Completo $1.150");
-    if (ingreso == "0") {
-    alert("Gracias, que tengas un buen día");
-    }
-    while (ingreso != "0") {
-        switch (ingreso) {
-            case "1":
-                alert("Seleccionaste Cavado Completo $850, te atenderemos de inmediato");
-                break;
-            case "2":
-                alert("Seleccionaste Piernas $1.400, te atenderemos de inmediato");
-                break;
-            case "3":
-                alert("Seleccionaste Brazo Entero $1.150, te atenderemos de inmediato");
-                break;
-            case "4":
-                alert("Seleccionaste Tira de cola $800, te atenderemos de inmediato");
-                break;
-            case "5":
-                alert("Seleccionaste Rostro Completo $1.150, te atenderemos de inmediato");
-                break;
-            default:
-                alert("opcion no valida");
-                break;
-        }
-    ingreso = prompt("Puedes elegir otro producto; \nPon 0 para finalizar: \n 1-Cavado Completo $850 \n 2-Pierna Entera $1.400 \n 3-Brazo Entero $1.150 \n 4-Tira de cola $800 \n 5-Rostro Completo $1.150");
-    if (ingreso == "0") {
-        alert("Pasemos al costo final del producto");
+function mostrarCatalogo() {
+    for (producto of catalogo) {
+        const {img, nombre, precio, precioDescuento} = producto
+        const productoHTML = `
+        <div class="col-12 shadow p-3 mb-5 bg-body cajaProductos">
+            <img class="imgProductos" src="${img}" alt="Foto"></img>
+            <h3 class="nombreProductos">${nombre}</h3>
+            <p class="precioProductos descuento">$${precio}</p>
+            <p class="precioProductos">$${precioDescuento}</p>
+            <a class="agregarProductos" href="https://api.whatsapp.com/send?phone=33145083&text=Buenas,%20queria%20hacer%20la%20compra%20de%20un%20producto.">
+            Comprar</a>
+        </div>
+        `
+        seccionProductos.innerHTML += productoHTML
     }
 }
 
-/* PRECIO FINAL */
-/*
-alert("Recorda que pagando en efectivo tenes un descuento del 30%")
+let catalogo = []
 
-let precioProducto = prompt("Ingresa el precio del producto seleccionado")
-precioProducto = parseInt(precioProducto);
-
-let pago = prompt("Usted paga en efectvio?: si / no")
-
-if (pago == "no"){
-    alert("El precio final es de " + precioProducto);
-}else{
-    const resta = (a,b) => a - b
-    const descuento = x => x * 0.30
-    
-    let precioDescuento = resta(precioProducto, descuento(precioProducto));
-    alert("El precio final con descuento es de " + Math.floor(precioDescuento));
-}
-*/
+fetchProductos().then(productos => {
+    catalogo = productos
+    mostrarCatalogo()
+})

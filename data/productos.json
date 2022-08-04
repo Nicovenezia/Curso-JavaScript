@@ -1,0 +1,86 @@
+[
+    {  
+        "img": "../img/img-tienda/PROMO1.webp",
+        "nombre":"Promo #1",
+        "precio":1600,
+        "precioDescuento":1250
+    },
+    {  
+        "img": "../img/img-tienda/PROMO2.webp",
+        "nombre":"Promo #2",
+        "precio":1750,
+        "precioDescuento":1350
+    },
+    {  
+        "img": "../img/img-tienda/PROMO3.webp",
+        "nombre":"Promo #3",
+        "precio":2300,
+        "precioDescuento":1800
+    },
+    {  
+        "img": "../img/img-tienda/CAVADO.webp",
+        "nombre":"CAVADO COMPLETO",
+        "precio":850,
+        "precioDescuento":650
+    },
+    {  
+        "img": "../img/img-tienda/PIERNAS.webp",
+        "nombre":"PIERNA ENTERA",
+        "precio":1400,
+        "precioDescuento":1100
+    },
+    {  
+        "img": "../img/img-tienda/PIERNAS.webp",
+        "nombre":"1/2 PIERNA",
+        "precio":850,
+        "precioDescuento":650
+    },
+    {  
+        "img": "../img/img-tienda/ROSTRO.webp",
+        "nombre":"ROSTRO COMPLETO",
+        "precio":1150,
+        "precioDescuento":900
+    },
+    {  
+        "img": "../img/img-tienda/AXILAS.webp",
+        "nombre":"AXILAS",
+        "precio":1100,
+        "precioDescuento":850
+    },
+    {  
+        "img": "../img/img-tienda/BRAZO.webp",
+        "nombre":"BRAZO ENTERO",
+        "precio":1150,
+        "precioDescuento":900
+    },
+    {  
+        "img": "../img/img-tienda/GLUTEO.webp",
+        "nombre":"GLUTEO",
+        "precio":950,
+        "precioDescuento":750
+    },
+    {  
+        "img": "../img/img-tienda/ABDOMEN.webp",
+        "nombre":"ABDOMEN",
+        "precio":1100,
+        "precioDescuento":850
+    },
+    {  
+        "img": "../img/img-tienda/PIES.webp",
+        "nombre":"PIES",
+        "precio":850,
+        "precioDescuento":650
+    },
+    {  
+        "img": "../img/img-tienda/MANOS.webp",
+        "nombre":"MANOS",
+        "precio":900,
+        "precioDescuento":700
+    },
+    {  
+        "img": "../img/img-tienda/ESPALDA.webp",
+        "nombre":"ESPALDA",
+        "precio":1300,
+        "precioDescuento":1000
+    }
+]

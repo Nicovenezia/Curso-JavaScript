@@ -23,10 +23,12 @@ body{
     display: flex;
     align-items: center;
     margin: 10px;
+    width: 100%;
+    justify-content: center;
 }
 
 .logo-valkiria{
-    height: 70px;
+    max-height: 70px;
     margin-bottom: 8px;
 }
 
