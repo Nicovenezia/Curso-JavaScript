@@ -16,8 +16,7 @@ function mostrarCatalogo() {
             <h3 class="nombreProductos">${nombre}</h3>
             <p class="precioProductos descuento">$${precio}</p>
             <p class="precioProductos">$${precioDescuento}</p>
-            <a class="agregarProductos" href="https://api.whatsapp.com/send?phone=33145083&text=Buenas,%20queria%20hacer%20la%20compra%20de%20un%20producto.">
-            Comprar</a>
+            <a class="agregarProductos" href="">Comprar</a>
         </div>
         `
         seccionProductos.innerHTML += productoHTML
@@ -28,5 +27,29 @@ let catalogo = []
 
 fetchProductos().then(productos => {
     catalogo = productos
-    mostrarCatalogo()
-})
+    mostrarCatalogo();
+});
+
+const carrito = []
+
+function sumarAlCarrito(nombre) {
+    const producto = catalogo.find(p => p.nombre = nombre)
+    carrito.push(producto);
+    console.log(carrito);
+}
+
+const buscarProductos = document.querySelector(".buscarTienda")
+
+function filtrarProductos(filtro){ 
+    let filtrado = catalogo.filter((el) => {
+        return el.nombre.includes(filtro);
+    });
+    return filtrado 
+};
+
+buscarProductos.addEventListener("keyup", (e) => {
+    e.preventDefault();
+    seccionProductos.innerHTML = "";
+    let filtro = filtrarProductos(buscarProductos.value);
+    mostrarCatalogo(filtro);
+});
