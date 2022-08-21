@@ -206,14 +206,11 @@ SECTION TIENDA        SECTION TIENDA           SECTION TIENDA
 }
 
 .agregarProductos{
-    width: 7rem;
-    height: 3rem;
     font-size: 1.4rem;
     text-decoration: none;
     background-color: rgba(0,146,255,1);
     color: white;
-    padding: 0.5rem;
-    margin: 5rem;
+    padding: 0.4rem;
     font-family: $fuente-nav;
     border-radius: 5px;
 }
@@ -222,6 +219,133 @@ SECTION TIENDA        SECTION TIENDA           SECTION TIENDA
     background-color: $color-header;
     color: $color-principal;
 }
+//CARRITO DE COMPRAS
+.carrito-de-compras{
+    height: 2.5rem;
+}
+
+.caja-carrito{
+    text-align: end;
+}
+
+.box-carrito{
+    text-align: center;
+}
+
+.a-volver{
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.contenedorCarrito{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.contenedorResumen{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 2rem;
+}
+
+.h3Resumen{
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+
+.pTotal{
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+.aComprar{
+    text-decoration: none;
+    font-size: 1.8rem;
+    background-color: #40e0d0;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 2rem;
+}
+
+.aComprar:hover{
+    background-color: #0092ff;
+    color: white;
+}
+
+.cajaCarrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.711);
+    border-radius: 20px;
+    background-color: #c7c7c791;
+    backdrop-filter: blur(5px);
+    margin: 2rem;
+    width: 100%;
+    max-width: 60rem;
+}
+
+.imgProductosCarrito{
+    height: 15rem;
+    margin: 2rem;
+}
+
+.nombreProductosCarrito{
+    font-size: 2rem;
+    margin: 3rem;
+}
+
+.precioProductosCarrito{
+    font-size: 1.5rem;
+    margin: 3rem;
+}
+
+.agregarProductosCarrito{
+    font-size: 1.4rem;
+    text-decoration: none;
+    background-color: rgba(0,146,255,1);
+    color: white;
+    padding: 0.4rem;
+    font-family: $fuente-nav;
+    border-radius: 5px;
+    margin: 2rem;
+}
+
+.agregarProductosCarrito:hover{
+    background-color: $color-header;
+    color: $color-principal;
+}
+
+.contenedorCompra{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.center{
+    text-align: center;
+}
+
+.btnComprar{
+    border-radius: 5px;
+    color: white;
+    background-color: #3daa26;
+    font-size: 1.6rem;
+    padding: .5rem;
+}
+
+.btnComprar:hover{
+    background-color: #00c41a;
+}
+
 /*
 SECTION TIENDA        SECTION TIENDA           SECTION TIENDA 
 */
